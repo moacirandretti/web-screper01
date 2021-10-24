@@ -4,8 +4,8 @@ on:
   - pull_request
 
 jobs:
-  danfer:
-    rund-on: ubuntu-latest
+  danger:
+    round-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
       - uses: actions/checkout@v2
