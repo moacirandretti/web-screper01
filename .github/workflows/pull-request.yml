@@ -5,7 +5,7 @@ on:
 
 jobs:
   danger:
-    round-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
       - uses: actions/checkout@v2
