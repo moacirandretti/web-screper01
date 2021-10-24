@@ -1,7 +1,7 @@
 name: "PR: Danger"
 
 on:
-  -pull_request
+  - pull_request
 
 jobs:
   danfer:
