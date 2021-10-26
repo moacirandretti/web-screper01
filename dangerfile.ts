@@ -3,24 +3,24 @@ import { danger, fail, warn, message, markdown, schedule, Scheduleable } from 'd
 // Note: You need to use schedule()
 
 const routeFile = danger.git.fileMatch('src/routes.ts')
-const PATTERN = /console\.(log|error|warn|info)/
-const GLOBAL_PATTERN = new RegExp(PATTERN.source, 'g')
-const findConsole = (content, whitelist) => {
+const findConsole = (content: any, whitelist?: any) => {
+  const PATTERN = /console\.(log|error|warn|info)/
+  const GLOBAL_PATTERN = new RegExp(PATTERN.source, 'g')
   let matches = content.match(GLOBAL_PATTERN)
   if (!matches) return []
 
   matches = matches.filter(match => {
     const singleMatch = PATTERN.exec(match)
     if (!singleMatch || singleMatch.length === 0) return false
-    return !whitelist.includes(singleMatch[1])
+    // return !whitelist.includes(singleMatch[1])
   })
 
   return matches
 }
 console.log('>>console1')
-console.log('>>matches', findConsole)
+console.log('>>matches', findConsole(routeFile))
 
-if (findConsole) {
+if (findConsole(routeFile)) {
   warn('Você abandonou um console.log! :( ')
 }
 
