@@ -14,10 +14,11 @@ const findConsole = (content, whitelist) => {
     if (!singleMatch || singleMatch.length === 0) return false
     return !whitelist.includes(singleMatch[1])
   })
-  console.log('>>matches', matches)
 
   return matches
 }
+console.log('>>console1')
+console.log('>>matches', findConsole)
 
 if (findConsole) {
   warn('Você abandonou um console.log! :( ')
