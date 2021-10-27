@@ -1,7 +1,7 @@
 import { danger, warn } from 'danger'
-import noConsole from 'danger-plugin-no-console'
+import eslint from 'danger-plugin-eslint'
 
-noConsole()
+eslint()
 
 const routeFile = danger.git.fileMatch('src/routes.ts')
 
