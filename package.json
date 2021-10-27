@@ -9,7 +9,10 @@
   "dependencies": {
     "axios": "^0.22.0",
     "cheerio": "^1.0.0-rc.10",
+    "console-format": "^2.1.1",
+    "danger-plugin-no-console": "^1.1.2",
     "express": "^4.17.1",
+    "lodash": "^4.17.21",
     "puppeteer": "^10.4.0",
     "tsc": "^2.0.3",
     "uuidv4": "^6.2.12"
@@ -20,6 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "danger": "^10.7.0",
+    "danger-plugin-eslint": "^0.1.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
